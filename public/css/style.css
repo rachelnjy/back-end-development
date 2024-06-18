@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+html,body{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    font-family:'sans-serif','Arial','Lucida Sans Unicode','Times New Roman';
+}
+
+/* Card styles */
+.card {
+  flex: 0 0 calc(30% - 25px);
+  margin: 3px;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+login html
+----------------------------------------------------------------------------------------------------------------
+*/ 
+svg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Ensure the wave stays in the background */
+  }
+
+/* use for both login and register */
+input {
+    width: calc(100% - 22px); /* Adjust the width as needed */
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 1px solid #ccc; /*Add a bottom border for a line effect*/
+    outline: none; /*Remove the default focus outline*/
+}
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+home html
+----------------------------------------------------------------------------------------------------------------
+*/ 
+.user-container,
+.taskprogress-container,
+.task-container {
+    block-size: 400px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+
+} 
+
+.user-container img,
+.taskprogress-container img{
+    grid-column: 1; /* Places image in the first column */
+    grid-row: 1 / span 3; /* Image spans over three rows */
+    width: 100%; 
+    max-width: 350px; 
+    align-self: center;
+}
+
+.user-container h1,
+.taskprogress-container h1,
+.user-container p,
+.taskprogress-container p,
+.user-container a,
+.taskprogress-container a {
+    grid-column: 2; /* Places the text in the second column */
+    grid-row: span 1;
+}
+
+
+.task-container img {
+  grid-column: 2; /* Place image in the second column */
+  grid-row: 1 / span 3; /* Image spans three rows */
+  width: 100%; 
+  max-width: 350px;
+  align-self: center;
+}
+
+.task-container h1,
+.task-container p,
+.task-container a {
+  grid-column: 1; /* Position in the second column */
+  grid-row: span 1;
+}
+
+@media (max-width: 768px) {
+    .user-container,
+    .taskprogress-container,
+    .task-container {
+      grid-template-columns: 1fr; /* Single column layout on smaller screens*/
+    }
+  
+    .user-container img,
+    .taskprogress-container img,
+    .task-container img {
+      grid-row: auto; /* Reset the image grid row*/
+    }
+  
+    .user-container h1,
+    .taskprogress-container h1,
+    .task-container h1,
+    .user-container p,
+    .taskprogress-container p,
+    .task-containerr p,
+    .user-container a,
+    .taskprogress-container a,
+    .task-container a {
+      grid-column: 1; /* Place text in the first column*/ 
+    }
+} 
+
+
+/* 
+--------------------------------------------------------------------------------------------------------
+message html
+--------------------------------------------------------------------------------------------------------
+*/
+.message-container input[type="text"],
+.message-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.message-container button[type="submit"]{
+  padding: 8px 15px;
+  background-color: rgb(179, 179, 179);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-container button[type="submit"]:hover {
+  background-color: rgb(150, 150, 150); 
+}
+
+

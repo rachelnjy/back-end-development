@@ -1,0 +1,85 @@
+<!-- add and get taskprogress -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Progress</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background: rgb(61, 61, 61);">
+            <div class="container-fluid navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-brand logo" href="../index.html">
+                        <img src="../../images/R.png" alt="" width="150" ; height="100" ;>
+                    </a>
+                </div>
+                <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" href="../user.html">User</a>
+                        <a class="nav-link" href="../task.html">Tasks</a>
+                        <a class="nav-link" href="../taskprogress.html">TaskProgress</a>
+                        <a class="nav-link" href="../messages.html">Messages</a>
+                        <a class="nav-link" href="../challenges.html">Challenges</a>
+                        <a class="nav-link" href="../eras.html">Eras</a>
+                        <a class="nav-link" href="../challengeComplete.html">Challenge Complete</a>
+                    
+                    </div>
+
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="../profile.html" id="profile">Profile</a>
+                        <a class="nav-link" href="../login.html" id="logoutButton">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#E5F6DF" fill-opacity="0.8"
+          d="M0,128L48,149.3C96,171,192,213,288,208C384,203,480,149,576,128C672,107,768,117,864,122.7C960,128,1056,128,1152,144C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+      </svg>
+      
+    <!-- showing the task details from the backend with the notes that was posted by the admin -->
+    <main class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Completed Tasks and Progress</h1>
+                </div>
+                <!-- Completed Tasks and Progress Container -->
+                <div id="completedTasksContainer" class="col-12">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-auto py-3 text-center" style="background: rgb(61, 61, 61); color: white;">
+        <p class="m-0 py-0 px-4">
+          BED CA2 Assignment created by Rachel Ng Jia Ying p2323530
+        </p>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="../js/taskprogress.js"></script>
+
+</body>
+
+</html>
